@@ -14,15 +14,13 @@ export const Products = () => {
     }
     let dataSearch = products.filter(product =>{
           return Object.keys(product).some(key =>
-            product[key].toString().toUpperCase().includes(filter.toString().toUpperCase())
+            product[key].toString().toLowerCase().includes(filter.toString().toUpperCase())
             )
     });
 
     return (
         <>
-
-            {products.length !== 0 && <h1>Products</h1>}
-            <section className="py-4 container">
+        <section className="py-4 container">        
               <div className="row justify-content-center">
 
             <div className="col-12 mb-5">   
@@ -36,6 +34,7 @@ export const Products = () => {
                  />
                  </div>
                  </div>
+            {products.length !== 0 && <h1>Products</h1>}
                
             <div className='products-container'>
                 {products.length === 0 && <div >slow internet...no products display</div>}
