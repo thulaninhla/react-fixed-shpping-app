@@ -23,6 +23,9 @@ export const Navbar = ({ user }) => {
             <div className='leftside'>
                 <img src="https://cdn.iconscout.com/icon/free/png-512/shopping-cart-442-1151214.png" alt="" />
             </div>
+            <div>
+                <h4><b>Shop for</b>Groceries</h4>
+                </div>
             {!user && <div className='rightside'>
                 <span><Link to="signup" className='navlink'>SIGN UP</Link></span>
                 <span><Link to="login" className='navlink'>LOGIN</Link></span>
